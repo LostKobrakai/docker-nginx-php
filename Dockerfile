@@ -54,6 +54,8 @@ ADD ./config/php/php-fpm.conf /etc/php5/fpm/php-fpm.conf
 
 RUN mkdir /var/www
 
+ADD ./config/index.php /var/www/index.php
+
 RUN usermod -u 1000 www-data
 RUN chown -R www-data:www-data /var/www
 
